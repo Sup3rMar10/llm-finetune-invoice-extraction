@@ -1,5 +1,6 @@
 """Task definition shared by data generation, training, evaluation and inference."""
 import json
+import os
 
 FIELDS = ["invoice_number", "vendor", "invoice_date", "due_date", "currency", "total", "po_number"]
 
@@ -45,6 +46,7 @@ def read_jsonl(path: str) -> list[dict]:
 
 
 def write_jsonl(path: str, rows: list[dict]) -> None:
+    os.makedirs(os.path.dirname(path) or ".", exist_ok=True)
     with open(path, "w", encoding="utf-8", newline="\n") as f:
         for row in rows:
             f.write(json.dumps(row, ensure_ascii=False) + "\n")
