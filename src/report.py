@@ -12,6 +12,7 @@ import matplotlib.pyplot as plt  # noqa: E402
 from src.common import FIELDS  # noqa: E402
 
 ORDER = ["base-zeroshot", "base-fewshot", "tuned"]
+COLORS = {"base-zeroshot": "#9aa5b1", "base-fewshot": "#6c8ebf", "tuned": "#2a9d8f"}
 SPLITS = [("test_id", "In-distribution (seen layouts, new invoices)"),
           ("test_ood", "Out-of-distribution (layouts never seen in training)")]
 
@@ -55,7 +56,7 @@ def plot_comparison(runs, names, results_dir):
     for ax, (split, title) in zip(axes, SPLITS, strict=True):
         have = [n for n in names if (n, split) in runs]
         vals = [runs[(n, split)]["exact_match"] * 100 for n in have]
-        bars = ax.bar(have, vals, color=["#9aa5b1", "#6c8ebf", "#2a9d8f"][:len(have)])
+        bars = ax.bar(have, vals, color=[COLORS[n] for n in have])
         ax.set_title(title.split(" (")[0], fontsize=10)
         ax.set_ylim(0, 105)
         for b, v in zip(bars, vals, strict=True):

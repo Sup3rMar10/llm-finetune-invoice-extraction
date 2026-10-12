@@ -1,0 +1,105 @@
+{
+  "name": "base-zeroshot",
+  "model": "Qwen/Qwen2.5-0.5B-Instruct",
+  "adapter": null,
+  "split": "test_id.jsonl",
+  "fewshot": 0,
+  "device": "cpu",
+  "seconds_per_sample": 5.73,
+  "n": 100,
+  "json_valid": 0.99,
+  "schema_valid": 0.93,
+  "exact_match": 0.36,
+  "field_accuracy_macro": 0.7842857142857144,
+  "field_accuracy": {
+    "invoice_number": 0.96,
+    "vendor": 0.64,
+    "invoice_date": 0.64,
+    "due_date": 0.65,
+    "currency": 0.92,
+    "total": 0.93,
+    "po_number": 0.75
+  },
+  "by_template": {
+    "tpl_keyvalue": {
+      "n": 20,
+      "json_valid": 1.0,
+      "schema_valid": 0.7,
+      "exact_match": 0.35,
+      "field_accuracy_macro": 0.8142857142857143,
+      "field_accuracy": {
+        "invoice_number": 1.0,
+        "vendor": 0.85,
+        "invoice_date": 0.55,
+        "due_date": 0.5,
+        "currency": 1.0,
+        "total": 0.9,
+        "po_number": 0.9
+      }
+    },
+    "tpl_email": {
+      "n": 20,
+      "json_valid": 1.0,
+      "schema_valid": 1.0,
+      "exact_match": 0.7,
+      "field_accuracy_macro": 0.9142857142857144,
+      "field_accuracy": {
+        "invoice_number": 1.0,
+        "vendor": 1.0,
+        "invoice_date": 0.7,
+        "due_date": 0.85,
+        "currency": 0.95,
+        "total": 1.0,
+        "po_number": 0.9
+      }
+    },
+    "tpl_ocr": {
+      "n": 20,
+      "json_valid": 1.0,
+      "schema_valid": 1.0,
+      "exact_match": 0.0,
+      "field_accuracy_macro": 0.55,
+      "field_accuracy": {
+        "invoice_number": 0.85,
+        "vendor": 0.1,
+        "invoice_date": 0.4,
+        "due_date": 0.35,
+        "currency": 0.8,
+        "total": 0.9,
+        "po_number": 0.45
+      }
+    },
+    "tpl_table": {
+      "n": 20,
+      "json_valid": 0.95,
+      "schema_valid": 0.95,
+      "exact_match": 0.7,
+      "field_accuracy_macro": 0.8857142857142858,
+      "field_accuracy": {
+        "invoice_number": 0.95,
+        "vendor": 0.95,
+        "invoice_date": 0.8,
+        "due_date": 0.8,
+        "currency": 0.9,
+        "total": 0.95,
+        "po_number": 0.85
+      }
+    },
+    "tpl_remittance": {
+      "n": 20,
+      "json_valid": 1.0,
+      "schema_valid": 1.0,
+      "exact_match": 0.05,
+      "field_accuracy_macro": 0.7571428571428571,
+      "field_accuracy": {
+        "invoice_number": 1.0,
+        "vendor": 0.3,
+        "invoice_date": 0.75,
+        "due_date": 0.75,
+        "currency": 0.95,
+        "total": 0.9,
+        "po_number": 0.65
+      }
+    }
+  }
+}

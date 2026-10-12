@@ -1,0 +1,23 @@
+{
+  "model": "Qwen/Qwen2.5-0.5B-Instruct",
+  "train": "data/train.jsonl",
+  "val": "data/val.jsonl",
+  "out": "outputs/qwen0.5b-lora",
+  "epochs": 1.0,
+  "lr": 0.0002,
+  "rank": 16,
+  "alpha": 32,
+  "dropout": 0.05,
+  "batch_size": 4,
+  "grad_accum": 2,
+  "max_len": 640,
+  "max_train": 200,
+  "max_steps": 0,
+  "seed": 42,
+  "grad_checkpointing": false,
+  "device": "cpu",
+  "trainable_params": 8798208,
+  "total_params": 502830976,
+  "train_seconds": 1926.7,
+  "steps": 25
+}

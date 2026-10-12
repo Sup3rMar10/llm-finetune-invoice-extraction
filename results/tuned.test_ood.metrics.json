@@ -1,0 +1,57 @@
+{
+  "name": "tuned",
+  "model": "Qwen/Qwen2.5-0.5B-Instruct",
+  "adapter": "outputs/qwen0.5b-lora",
+  "split": "test_ood.jsonl",
+  "fewshot": 0,
+  "device": "cpu",
+  "seconds_per_sample": 4.16,
+  "n": 100,
+  "json_valid": 1.0,
+  "schema_valid": 1.0,
+  "exact_match": 0.66,
+  "field_accuracy_macro": 0.9328571428571429,
+  "field_accuracy": {
+    "invoice_number": 0.86,
+    "vendor": 1.0,
+    "invoice_date": 0.76,
+    "due_date": 0.92,
+    "currency": 1.0,
+    "total": 0.99,
+    "po_number": 1.0
+  },
+  "by_template": {
+    "tpl_statement": {
+      "n": 50,
+      "json_valid": 1.0,
+      "schema_valid": 1.0,
+      "exact_match": 0.48,
+      "field_accuracy_macro": 0.8885714285714286,
+      "field_accuracy": {
+        "invoice_number": 0.72,
+        "vendor": 1.0,
+        "invoice_date": 0.66,
+        "due_date": 0.84,
+        "currency": 1.0,
+        "total": 1.0,
+        "po_number": 1.0
+      }
+    },
+    "tpl_chat": {
+      "n": 50,
+      "json_valid": 1.0,
+      "schema_valid": 1.0,
+      "exact_match": 0.84,
+      "field_accuracy_macro": 0.9771428571428571,
+      "field_accuracy": {
+        "invoice_number": 1.0,
+        "vendor": 1.0,
+        "invoice_date": 0.86,
+        "due_date": 1.0,
+        "currency": 1.0,
+        "total": 0.98,
+        "po_number": 1.0
+      }
+    }
+  }
+}
